@@ -2,7 +2,7 @@
 const section = document.querySelector("section");
 
 //generate data
-const getData = () => [
+const imgData = () => [
   { imgSrc: "./assets/img/awaken.jpg", name: "awaken" },
   { imgSrc: "./assets/img/death.jpg", name: "death" },
   { imgSrc: "./assets/img/graveyard.webp", name: "graveyard" },
@@ -23,7 +23,7 @@ const getData = () => [
 
 //randomize cards
 const randomize = () => {
-  const cardData = getData();
+  const cardData = imgData();
   cardData.sort(() => Math.random() - 0.5);
   return cardData;
 };

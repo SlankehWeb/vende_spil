@@ -1,35 +1,44 @@
-.container {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.imgdiv {
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section{
+  display: grid;
+  grid-template-columns: repeat(4, 8rem);
+  grid-template-rows: repeat(4, 8rem);
+  grid-gap: 1rem;
+  perspective: 800px;
+}
+
+.card {
   position: relative;
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  line-height: 150px;
-  font-size: 20px;
-  padding: 10px;
-  text-align: center;
-  border: 2px solid black;
-  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 }
 
-img {
-  width: 120px;
-  height: 120px;
-  padding: 10px;
+.face,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
 }
 
-.hide {
-  padding: 10px;
-  visibility: hidden;
+.back {
+  background-color: black;
+  backface-visibility: hidden;
 }
 
-.match {
-  visibility: visible !important;
+.toggleCard{
+  transform: rotateY(180deg);
 }
-
-.showimg {
-  visibility: visible !important;
-}/*# sourceMappingURL=main.css.map */

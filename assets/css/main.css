@@ -4,14 +4,16 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url(/assets/img/background.jpg);
+  background-size: auto;
 }
 
-section{
+section {
   display: grid;
   grid-template-columns: repeat(4, 8rem);
   grid-template-rows: repeat(4, 8rem);
@@ -22,7 +24,7 @@ section{
 .card {
   position: relative;
   transform-style: preserve-3d;
-  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  transition: all 2s cubic-bezier(0.155, 0.585, 0.4, 1.1);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 }
 
@@ -35,10 +37,18 @@ section{
 }
 
 .back {
-  background-color: black;
+  background-image: url("/assets/img/cadback.jpg");
+  background-size: cover;
   backface-visibility: hidden;
 }
 
-.toggleCard{
+.toggleCard {
   transform: rotateY(180deg);
+}
+
+h1 {
+  font-size: 4em;
+  color: rgb(215, 107, 13);
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
